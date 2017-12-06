@@ -42,27 +42,31 @@ public class PlayerShoot : NetworkBehaviour {
             return;
         }
 
-        //Weapon switching keycodes
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if(isLocalPlayer)
         {
-            weaponManager.SwitchWeapon(1);
-            return;
+            //Weapon switching keycodes
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                weaponManager.CmdSwitchWeapon(1);
+                return;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                weaponManager.CmdSwitchWeapon(2);
+                return;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                weaponManager.CmdSwitchWeapon(3);
+                return;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                weaponManager.CmdSwitchWeapon(4);
+                return;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            weaponManager.SwitchWeapon(2);
-            return;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            weaponManager.SwitchWeapon(3);
-            return;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            weaponManager.SwitchWeapon(4);
-            return;
-        }
+        
 
         //Only allows reloading if the clip is not full
         if (currentWeapon.bullets < currentWeapon.maxBullets)

@@ -1039,6 +1039,7 @@ MonoBehaviour:
   - {fileID: 95170252068386114}
   - {fileID: 20319730768888188}
   - {fileID: 114189861523445458}
+  - {fileID: 114812588193804242}
   remoteLayerName: RemotePlayer
   dontDrawLayerName: DontDraw
   playerGraphics: {fileID: 1593745002312742}
@@ -1141,16 +1142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponLayerName: Weapon
-  primaryWeapon:
-    name: Blaster
-    damage: 20
-    range: 100
-    fireRate: 10
-    maxBullets: 20
-    bullets: 20
-    reloadTime: 1
-    graphics: {fileID: 1671029925390012, guid: 119551172e2002344983c075ab97ef79, type: 2}
   weaponHolder: {fileID: 4974898728784168}
+  weaponSwitchTime: 0.5
   isReloading: 0
 --- !u!114 &114965592784265680
 MonoBehaviour:

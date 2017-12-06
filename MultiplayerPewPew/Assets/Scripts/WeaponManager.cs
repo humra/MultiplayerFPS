@@ -8,24 +8,23 @@ public class WeaponManager : NetworkBehaviour {
     [SerializeField]
     private string weaponLayerName = "Weapon";
     [SerializeField]
-    private AssaultRifleScript primaryWeapon;
-    [SerializeField]
     private Transform weaponHolder;
     [SerializeField]
     private float weaponSwitchTime = 0.5f;
 
     private Weapons currentWeapon;
     private WeaponGraphics currentGraphics;
-    private int currentWeaponIndex = 1;
+    private int currentWeaponIndex;
 
     public bool isReloading = false;
 
     private void Start()
     {
-        EquipWeapon(new AssaultRifleScript());
+        //EquipWeapon(new AssaultRifleScript());
+        CmdSwitchWeapon(1);
     }
 
-    private void EquipWeapon(Weapons newWeapon)
+    public void EquipWeapon(Weapons newWeapon)
     {
         currentWeapon = newWeapon;
 
@@ -97,26 +96,36 @@ public class WeaponManager : NetworkBehaviour {
         }
     }
 
-    public void SwitchWeapon(int selectedWeaponIndex)
+    [Command]
+    public void CmdSwitchWeapon(int selectedWeaponIndex)
     {
-        if(selectedWeaponIndex != currentWeaponIndex)
+        if (selectedWeaponIndex != currentWeaponIndex)
         {
-            StartCoroutine(SwitchWeaponCrt(selectedWeaponIndex));
+            RpcSwitchWeaponCrt(selectedWeaponIndex);
         }
     }
 
-    public IEnumerator SwitchWeaponCrt(int selectedWeaponIndex)
+    [ClientRpc]
+    public void RpcSwitchWeaponCrt(int selectedWeaponIndex)
+    {
+
+        StartCoroutine(weaponSwitchTimeout(selectedWeaponIndex));
+
+        
+    }
+
+    private IEnumerator weaponSwitchTimeout(int selectedWeaponIndex)
     {
         ClearOldWeapon();
 
         yield return new WaitForSeconds(weaponSwitchTime);
 
-        switch(selectedWeaponIndex)
+        switch (selectedWeaponIndex)
         {
-            case 1:
+            case 2:
                 EquipWeapon(new AssaultRifleScript());
                 break;
-            case 2:
+            case 1:
                 EquipWeapon(new PistolScript());
                 break;
             case 3:

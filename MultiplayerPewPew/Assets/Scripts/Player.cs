@@ -49,18 +49,6 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public string username = "Loading...";
 
-    //private void Update()
-    //{
-    //    if (!isLocalPlayer)
-    //    {
-    //        return;
-    //    }
-
-    //    if (Input.GetKeyDown(KeyCode.K))
-    //    {
-    //        RpcTakeDamage(10, "test");
-    //    }
-    //}
 
     public void SetupPlayer()
     {
