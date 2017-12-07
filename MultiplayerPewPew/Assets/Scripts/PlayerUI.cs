@@ -15,6 +15,8 @@ public class PlayerUI : MonoBehaviour {
     private Text ammoCountText;
     [SerializeField]
     private string reloadText = "RLD";
+    [SerializeField]
+    private GameObject scopeOverlay;
 
     private PlayerController controller;
     private Player player;
@@ -69,6 +71,18 @@ public class PlayerUI : MonoBehaviour {
         else if(Input.GetKeyUp(KeyCode.Tab))
         {
             scoreboard.SetActive(false);
+        }
+
+        if(weaponManager.currentWeaponIndex == 3)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                scopeOverlay.SetActive(true);
+            }
+            else if (Input.GetButtonUp("Fire2"))
+            {
+                scopeOverlay.SetActive(false);
+            }
         }
     }
 

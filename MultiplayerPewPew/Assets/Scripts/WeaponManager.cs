@@ -14,7 +14,7 @@ public class WeaponManager : NetworkBehaviour {
 
     private Weapons currentWeapon;
     private WeaponGraphics currentGraphics;
-    private int currentWeaponIndex;
+    public int currentWeaponIndex;
 
     public bool isReloading = false;
     public bool isSwitching = false;

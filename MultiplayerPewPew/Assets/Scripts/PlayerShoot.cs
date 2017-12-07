@@ -9,9 +9,11 @@ public class PlayerShoot : NetworkBehaviour {
     private Weapons currentWeapon;
 
     [SerializeField]
-    private Camera cam;
+    private Camera mainCamera;
     [SerializeField]
     private LayerMask mask;
+    [SerializeField]
+    private GameObject weaponCamera;
 
     private WeaponManager weaponManager;
 
@@ -20,9 +22,13 @@ public class PlayerShoot : NetworkBehaviour {
     private float currentDivergence;
     private float lastShotTime;
 
+    [SerializeField]
+    private float zoomedInFOV = 20f;
+    private float defaultFOV;
+
     private void Start()
     {
-        if(cam == null)
+        if(mainCamera == null)
         {
             Debug.LogError("PlayerShoot: no camera referenced");
             this.enabled = false;
@@ -71,12 +77,26 @@ public class PlayerShoot : NetworkBehaviour {
             }
         }
 
-
         //Only allows reloading if the clip is not full
         if (currentWeapon.bullets < currentWeapon.maxBullets && Input.GetButton("Reload"))
         {
             weaponManager.Reload();
             return;
+        }
+
+        if(weaponManager.currentWeaponIndex == 3)
+        {
+            if(Input.GetButtonDown("Fire2"))
+            {
+                defaultFOV = mainCamera.fieldOfView;
+                weaponCamera.SetActive(false);
+                mainCamera.fieldOfView = zoomedInFOV;
+            }
+            if(Input.GetButtonUp("Fire2"))
+            {
+                weaponCamera.SetActive(true);
+                mainCamera.fieldOfView = defaultFOV;
+            }
         }
 
         //If a weapon has a fire rate of 0f then it is not automatic and requires
@@ -184,12 +204,12 @@ public class PlayerShoot : NetworkBehaviour {
 
         //Simulates recoil by setting the angle in which the bullet travels from the barrel
         //It is made in a way that the farther the bullet goes the less accuracy you get
-        Vector3 divergence = cam.transform.forward;
+        Vector3 divergence = mainCamera.transform.forward;
         divergence.x += (1 - 2 * Random.value) * currentDivergence;
         divergence.y += (1 - 2 * Random.value) * currentDivergence;
 
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, divergence, out hit, currentWeapon.range, mask))
+        if (Physics.Raycast(mainCamera.transform.position, divergence, out hit, currentWeapon.range, mask))
         {
 
             if (hit.collider.tag.Equals(PLAYER_TAG))

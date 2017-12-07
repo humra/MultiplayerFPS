@@ -540,7 +540,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.02
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -575,7 +575,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -950,10 +950,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea48f1c1d4b54484e95e2d4d2a782ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 20165507289160772}
+  mainCamera: {fileID: 20165507289160772}
   mask:
     serializedVersion: 2
     m_Bits: 4294967039
+  weaponCamera: {fileID: 1297992076346724}
+  zoomedInFOV: 20
 --- !u!114 &114478627086871868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1145,6 +1147,7 @@ MonoBehaviour:
   weaponLayerName: Weapon
   weaponHolder: {fileID: 4974898728784168}
   weaponSwitchTime: 0.5
+  currentWeaponIndex: 0
   isReloading: 0
   isSwitching: 0
 --- !u!114 &114965592784265680
