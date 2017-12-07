@@ -13,6 +13,8 @@ public class PlayerUI : MonoBehaviour {
     private GameObject scoreboard;
     [SerializeField]
     private Text ammoCountText;
+    [SerializeField]
+    private string reloadText = "RLD";
 
     private PlayerController controller;
     private Player player;
@@ -44,9 +46,19 @@ public class PlayerUI : MonoBehaviour {
     {
         SetFuelAmount(controller.GetThrusterFuelAmount());
         SetHealthAmount(player.GetHealthPercentage());
-        SetAmmoCount(weaponManager.GetCurrentWeapon().bullets);
+        if(weaponManager.GetCurrentWeapon() != null)
+        {
+            if(weaponManager.isReloading)
+            {
+                SetAmmoCount(reloadText);
+            }
+            else
+            {
+                SetAmmoCount(weaponManager.GetCurrentWeapon().bullets, weaponManager.GetCurrentWeapon().maxBullets);
+            }
+        }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();
         }
@@ -60,14 +72,19 @@ public class PlayerUI : MonoBehaviour {
         }
     }
 
-    public void TogglePauseMenu()
+    private void TogglePauseMenu()
     {
         pauseMenu.SetActive(!pauseMenu.activeSelf);
         PauseMenu.isOn = pauseMenu.activeSelf;
     }
 
-    private void SetAmmoCount(int amount)
+    private void SetAmmoCount(int amount, int maxAmount)
     {
-        ammoCountText.text = amount.ToString();
+        ammoCountText.text = amount + "/" + maxAmount;
+    }
+
+    private void SetAmmoCount(string text)
+    {
+        ammoCountText.text = text;
     }
 }

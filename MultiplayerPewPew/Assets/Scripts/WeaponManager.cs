@@ -17,10 +17,10 @@ public class WeaponManager : NetworkBehaviour {
     private int currentWeaponIndex;
 
     public bool isReloading = false;
+    public bool isSwitching = false;
 
     private void Start()
     {
-        //EquipWeapon(new AssaultRifleScript());
         CmdSwitchWeapon(1);
     }
 
@@ -74,7 +74,7 @@ public class WeaponManager : NetworkBehaviour {
     private IEnumerator ReloadCoroutine()
     {
         isReloading = true;
-        CmdOnReload();
+        //CmdOnReload(); Reload animation currently disabled
         yield return new WaitForSeconds(currentWeapon.reloadTime);
         currentWeapon.bullets = currentWeapon.maxBullets;
         isReloading = false;
@@ -106,16 +106,14 @@ public class WeaponManager : NetworkBehaviour {
     }
 
     [ClientRpc]
-    public void RpcSwitchWeaponCrt(int selectedWeaponIndex)
+    private void RpcSwitchWeaponCrt(int selectedWeaponIndex)
     {
-
         StartCoroutine(weaponSwitchTimeout(selectedWeaponIndex));
-
-        
     }
 
     private IEnumerator weaponSwitchTimeout(int selectedWeaponIndex)
     {
+        isSwitching = true;
         ClearOldWeapon();
 
         yield return new WaitForSeconds(weaponSwitchTime);
@@ -139,5 +137,6 @@ public class WeaponManager : NetworkBehaviour {
         }
 
         currentWeaponIndex = selectedWeaponIndex;
+        isSwitching = false;
     }
 }

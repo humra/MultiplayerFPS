@@ -860,6 +860,7 @@ MonoBehaviour:
   thrusterForce: 1250
   thrusterFuelBurnSpeed: 1
   thrusterFuelRegenSpeed: 0.3
+  thrusterFuelAmount: 1.5
   environmentMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -1145,6 +1146,7 @@ MonoBehaviour:
   weaponHolder: {fileID: 4974898728784168}
   weaponSwitchTime: 0.5
   isReloading: 0
+  isSwitching: 0
 --- !u!114 &114965592784265680
 MonoBehaviour:
   m_ObjectHideFlags: 1

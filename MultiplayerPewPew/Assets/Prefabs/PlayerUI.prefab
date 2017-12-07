@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 222782769069737334}
   - component: {fileID: 114977764191044018}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,6 +542,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 1211204658449500}
   scoreboard: {fileID: 1964336279410860}
   ammoCountText: {fileID: 114902825008094808}
+  reloadText: RELOAD
 --- !u!114 &114266554020981924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -992,7 +993,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 
 --- !u!114 &114907411808812380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1360,7 +1361,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1384061661353824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.000015, y: 0, z: 0}
+  m_LocalPosition: {x: 19.14003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224668406303039212}
@@ -1368,8 +1369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -58.299973, y: -0.00000047684}
-  m_SizeDelta: {x: 103.16, y: 40}
+  m_AnchoredPosition: {x: -86.10997, y: -0.00000047684}
+  m_SizeDelta: {x: 158.78, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224372259597027420
 RectTransform:
@@ -1469,7 +1470,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1308684956185264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.5, y: 4.5, z: 0}
+  m_LocalPosition: {x: -85.399994, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224708595521004520}
@@ -1479,8 +1480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -110.5, y: 54.5}
-  m_SizeDelta: {x: 160.59998, y: 68.5}
+  m_AnchoredPosition: {x: -135.4, y: 54.5}
+  m_SizeDelta: {x: 210.5, y: 68.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224676922119537206
 RectTransform:
@@ -1507,7 +1508,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1922596672246826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.299988, y: 0, z: 0}
+  m_LocalPosition: {x: -80.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224668406303039212}

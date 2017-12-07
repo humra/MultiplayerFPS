@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
     private float thrusterFuelBurnSpeed = 1f;
     [SerializeField]
     private float thrusterFuelRegenSpeed = 0.3f;
-
+    [SerializeField]
     private float thrusterFuelAmount = 1f;
 
     [SerializeField]

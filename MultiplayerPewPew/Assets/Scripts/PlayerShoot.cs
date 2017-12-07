@@ -35,7 +35,11 @@ public class PlayerShoot : NetworkBehaviour {
     private void Update()
     {
         currentWeapon = weaponManager.GetCurrentWeapon();
-        //currentDivergence = currentWeapon.maxDivergence;
+
+        if(currentWeapon == null)
+        {
+            return;
+        }
 
         if(PauseMenu.isOn)
         {
@@ -66,21 +70,18 @@ public class PlayerShoot : NetworkBehaviour {
                 return;
             }
         }
-        
+
 
         //Only allows reloading if the clip is not full
-        if (currentWeapon.bullets < currentWeapon.maxBullets)
+        if (currentWeapon.bullets < currentWeapon.maxBullets && Input.GetButton("Reload"))
         {
-            if (Input.GetButton("Reload"))
-            {
-                weaponManager.Reload();
-                return;
-            }
+            weaponManager.Reload();
+            return;
         }
 
         //If a weapon has a fire rate of 0f then it is not automatic and requires
         //a button press for every shot made
-        if(currentWeapon.fireRate <= 0f)
+        if (currentWeapon.fireRate <= 0f)
         {
             //Checking if enough time has passed since the last shot made by 
             //manual weapons

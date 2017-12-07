@@ -10,7 +10,6 @@ public class Player : NetworkBehaviour
 
     [SyncVar]
     private bool _isDead = false;
-
     public bool isDead
     {
         get
@@ -29,7 +28,6 @@ public class Player : NetworkBehaviour
 
     [SyncVar]
     private int currentHealth;
-
     public int kills;
     public int deaths;
 
@@ -38,7 +36,6 @@ public class Player : NetworkBehaviour
     private bool[] wasEnabled;
     [SerializeField]
     private GameObject[] disableGameObjectsOnDeath;
-
     [SerializeField]
     private GameObject deathEffect;
     [SerializeField]
