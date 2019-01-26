@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: fe19b36ccdbdb3546a6ed028a4e30687
-timeCreated: 1471356426
-licenseType: Pro
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: Arena
@@ -129,26 +127,134 @@ ModelImporter:
     4300046: Entrance_Floor_Arena_Base
     7400000: Default Take
     9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body__fire_PNG6032_png
+    second: {fileID: 2100000, guid: 221b135f775717c4f89f8d2badb8a6c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_1_2__materials_Cube_1_2_png
+    second: {fileID: 2100000, guid: c04b3b051b9507947a4a5fffaa1ef948, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fire__fire_PNG6032_png
+    second: {fileID: 2100000, guid: 221b135f775717c4f89f8d2badb8a6c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamp__fire_PNG6032_png
+    second: {fileID: 2100000, guid: 221b135f775717c4f89f8d2badb8a6c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_002__vintgae-red-holiday-table-cloth-hand-painted-ca-california-line
+    second: {fileID: 2100000, guid: 51c3f920dea274c4491f506cb5f3868c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_004
+    second: {fileID: 2100000, guid: fdf4d9e12056436469a2c275699674c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__1d86f5d5bc2bda704eef5ff3ff0c2ab2_jpg
+    second: {fileID: 2100000, guid: b1a3650c37aaf2d4f9166c16dd106bee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__69777695cf0d4f5c010beee49ad17c85_jpg
+    second: {fileID: 2100000, guid: f2e4385bf18ba90458fa4b8b93334566, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__Chair_jpg
+    second: {fileID: 2100000, guid: b93d45c04defc7f42a08c1ecfb94a8f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__Glass_png
+    second: {fileID: 2100000, guid: 13d45cef00973d14b9b8441a9aac974b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__Stone-Block-Texture_jpg
+    second: {fileID: 2100000, guid: f653e1a107b2d6f43b90ffb8c112453d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None___concrete_11__granite_wall_smooth_dirt_pillar__by_hhh316-d7mhl6
+    second: {fileID: 2100000, guid: cdfe780f636117b4fa81f633b6b1c95f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__entrance2_png
+    second: {fileID: 2100000, guid: 44b1edcc4334b644bacb1daffb9a8593, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__entrance_png
+    second: {fileID: 2100000, guid: 33073ddbd923a4b4b9b2c988c77f6d45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__fdb6e3a9c6082adca17b5870a3613745_jpg
+    second: {fileID: 2100000, guid: 0f24bd93c15fc8043a056884f2a54aad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__fdb6e3a9c6082adca17b5870a3613745_jpg_001
+    second: {fileID: 2100000, guid: 0f24bd93c15fc8043a056884f2a54aad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__fire_PNG6032_png
+    second: {fileID: 2100000, guid: 221b135f775717c4f89f8d2badb8a6c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Platform__fire_PNG6032_png
+    second: {fileID: 2100000, guid: 221b135f775717c4f89f8d2badb8a6c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default_1_1
+    second: {fileID: 2100000, guid: 55013351579ff1a48a1b141250ea0aa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: 39faf2eb03443f64ea361e9404c518d4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -156,25 +262,34 @@ ModelImporter:
     globalScale: 3
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 3
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -186,6 +301,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

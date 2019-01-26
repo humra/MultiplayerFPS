@@ -5,7 +5,6 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour {
 
-    //Singleton
     public static GameManager instance;
 
     public MatchSettings matchSettings;
